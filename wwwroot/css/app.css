@@ -139,3 +139,51 @@ section h2::after {
         right: 0.75rem;
         top: 0.5rem;
     }
+
+.timeline {
+    position: relative;
+    margin-top: 2rem;
+    padding-left: 2rem;
+    border-left: 2px solid rgba(255, 255, 255, .12);
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 2.5rem;
+}
+
+    .timeline-item:last-child {
+        padding-bottom: 0;
+    }
+
+.timeline-dot {
+    position: absolute;
+    left: -2.55rem;
+    top: .35rem;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--gradient);
+    box-shadow: 0 0 0 4px var(--bg);
+}
+
+.timeline-content h3 {
+    font-size: 1.15rem;
+    margin: 0 0 .15rem;
+}
+
+.timeline-content .company {
+    font-weight: 600;
+    margin: 0 0 .15rem;
+}
+
+.timeline-content .period {
+    color: var(--muted);
+    font-size: .9rem;
+    margin: 0 0 .4rem;
+}
+
+.timeline-content .desc {
+    color: var(--muted);
+    margin: 0;
+}

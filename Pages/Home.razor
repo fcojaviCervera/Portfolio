@@ -21,7 +21,28 @@
 
 <section id="experiencia">
     <h2>Experiencia</h2>
-    <p>(Próximamente: línea de tiempo con tus puestos.)</p>
+    <div class="timeline">
+
+        @foreach (var item in CvData.Experience)
+        {
+            <div class="timeline-item">
+
+                <span class="timeline-dot"></span>
+                <div class="timeline-content">
+
+                    <h3> @item.Role</h3>
+                    <p class="company"> @item.Company @(item.Location is not null ? $" · {item.Location}" : "")</p>
+                    <p class="period"> @item.Period </p>
+                    @if (item.Description is not null)
+                    {
+                        <p class="desc"> @item.Description</p>
+                    }
+
+                </div>
+            </div>
+        }
+    </div>
+
 </section>
 
 <section id="tecnologias">
