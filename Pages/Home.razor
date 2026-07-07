@@ -13,41 +13,80 @@
 
 <section id="sobre-mi">
     <h2>Sobre mí</h2>
-    <p>
-        Ingeniero de software especializado en desarrollo .NET, con experiencia
-        en backend, bases de datos y aplicaciones de gestión. (Edita esto a tu gusto.)
-    </p>
+    <div class="section-contenido">
+        <p>
+            Ingeniero de software especializado en desarrollo .NET, con experiencia
+            en backend, bases de datos y aplicaciones de gestión.
+        </p>
+        <p>
+            Me desenvuelvo bien en el desarrollo de nuevos evolutivos y en la resolución de incidencias.
+            (Edita esto a tu gusto.)
+        </p>
+    </div>
 </section>
 
 <section id="experiencia">
     <h2>Experiencia</h2>
-    <div class="timeline">
+    <div class="section-contenido">
+        <div class="timeline">
 
-        @foreach (var item in CvData.Experience)
-        {
-            <div class="timeline-item">
+            @foreach (var item in CvData.Experience)
+            {
+                <div class="timeline-item">
 
-                <span class="timeline-dot"></span>
-                <div class="timeline-content">
+                    <span class="timeline-dot"></span>
+                    <div class="timeline-content">
 
-                    <h3> @item.Role</h3>
-                    <p class="company"> @item.Company @(item.Location is not null ? $" · {item.Location}" : "")</p>
-                    <p class="period"> @item.Period </p>
-                    @if (item.Description is not null)
-                    {
-                        <p class="desc"> @item.Description</p>
-                    }
+                        <h3> @item.Role</h3>
+                        <p class="company"> @item.Company @(item.Location is not null ? $" · {item.Location}" : "")</p>
+                        <p class="period"> @item.Period </p>
+                        @if (item.Description is not null)
+                        {
+                            <p class="desc"> @item.Description</p>
+                        }
+                        @if (item.Technologies is not null)
+                        {
+                            <div class="tags">
+                                <strong>Tecnologías:</strong>
 
+                                @foreach (var tech in item.Technologies)
+                                {
+                                    <span class="tag">
+                                        @tech
+                                    </span>
+
+                                }
+                            </div>
+                        }
+
+                    </div>
                 </div>
-            </div>
-        }
+            }
+        </div>
     </div>
 
 </section>
 
 <section id="tecnologias">
     <h2>Tecnologías</h2>
-    <p>(Próximamente: tu stack con iconos.)</p>
+    <div class="tech-groups">
+
+        @foreach (var category in CvData.Technologies)
+        {
+            <div class="tech-category">
+                <h3> @category.Title</h3>
+                <div class="tech-grid">
+                    @foreach (var tech in category.Items)
+                    {
+                        <div class="tech-item">
+                            <i class="@tech.Icon"></i>
+                            <span class="tech-name">@tech.Name</span>
+                        </div>
+                    }
+                </div>
+            </div>
+        }
+    </div>
 </section>
 
 <section id="proyectos">

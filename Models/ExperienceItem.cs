@@ -6,6 +6,7 @@
         string Role,
         string Period,
         string? Location = null,
-        string? Description = null
+        string? Description = null,
+        string[]? Technologies = null
     );
 }
