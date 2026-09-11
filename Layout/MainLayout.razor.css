@@ -55,3 +55,32 @@
 main {
     padding-top: 64px;
 }
+
+@media (max-width: 640px) {
+    .navbar {
+        padding: 0 1rem;
+        gap: .75rem;
+    }
+
+    .brand {
+        font-size: 1.05rem;
+        flex-shrink: 0;
+    }
+
+    .nav-links {
+        gap: 1.1rem;
+        overflow-x: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        mask-image: linear-gradient(to right, transparent, black 12px, black 92%, transparent);
+    }
+
+    .nav-links::-webkit-scrollbar {
+        display: none;
+    }
+
+    .nav-links a {
+        white-space: nowrap;
+        font-size: .88rem;
+    }
+}

@@ -1,0 +1,32 @@
+﻿<section id="proyectos" class="seccion-proyectos">
+    <h2 class="titulo-seccion">Proyectos</h2>
+
+    <div class="grid-proyectos">
+        @foreach (var proyecto in CvData.Proyectos)
+        {
+            <article class="tarjeta tarjeta-proyecto">
+                <h3>@proyecto.Titulo</h3>
+                <p>@proyecto.Descripcion</p>
+
+                <div class="chips-proyecto">
+                    @foreach (var tech in proyecto.Tecnologias)
+                    {
+                        <span class="chip">@tech</span>
+                    }
+                </div>
+
+                <div class="enlaces-proyecto">
+                    <a href="@proyecto.UrlRepositorio" target="_blank" rel="noopener noreferrer" class="enlace-proyecto">
+                        Ver en GitHub
+                    </a>
+                    @if (!string.IsNullOrWhiteSpace(proyecto.UrlDemo))
+                    {
+                        <a href="@proyecto.UrlDemo" target="_blank" rel="noopener noreferrer" class="enlace-proyecto enlace-demo">
+                            Ver demo
+                        </a>
+                    }
+                </div>
+            </article>
+        }
+    </div>
+</section>

@@ -6,8 +6,16 @@
     <h1>Francisco Javier Cervera Muñoz</h1>
     <p class="subtitle">Desarrollador .NET</p>
     <div class="hero-actions">
-        <a href="#proyectos">Ver proyectos</a>
-        <a href="#contacto">Contacto</a>
+        <a href="#proyectos" class="btn-primary">Ver proyectos</a>
+        <a href="files/CV_Francisco_Javier_Cervera.pdf" download="CV_Francisco_Javier_Cervera.pdf" class="btn-secondary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            Descargar CV
+        </a>
+        <a href="#contacto" class="btn-secondary">Contacto</a>
     </div>
 </section>
 
@@ -15,12 +23,17 @@
     <h2>Sobre mí</h2>
     <div class="section-contenido">
         <p>
-            Ingeniero de software especializado en desarrollo .NET, con experiencia
-            en backend, bases de datos y aplicaciones de gestión.
+            Soy ingeniero de software especializado en desarrollo .NET, con más de 10 años de
+            experiencia construyendo y manteniendo aplicaciones backend, desde sistemas de gestión
+            hasta integraciones con colas de mensajería (RabbitMQ) y bases de datos relacionales y
+            no relacionales (SQL Server, MySQL, Oracle, MongoDB, Redis).
         </p>
         <p>
-            Me desenvuelvo bien en el desarrollo de nuevos evolutivos y en la resolución de incidencias.
-            (Edita esto a tu gusto.)
+            A lo largo de mi carrera he combinado el desarrollo de nuevos evolutivos con la
+            resolución de incidencias en producción, moviéndome con soltura entre C#, TypeScript y
+            WPF, además de tecnologías cloud y de contenedores como Docker, AWS y Azure. Me gusta
+            entender bien el problema de negocio antes de escribir código, y cuidar tanto la
+            arquitectura como los detalles que hacen que una aplicación sea fácil de mantener.
         </p>
     </div>
 </section>
@@ -89,14 +102,36 @@
     </div>
 </section>
 
-<section id="proyectos">
-    <h2>Proyectos</h2>
-    <p>(Próximamente: tarjetas de proyectos.)</p>
-</section>
+<Proyectos />
 
 <section id="contacto">
     <h2>Contacto</h2>
-    <p>Email: franciscojavier.cervera7@gmail.com</p>
-    <p>LinkedIn: linkedin.com/in/franciscojavier-cervera-muñoz</p>
-    <p>Murcia, España</p>
+    <div class="contacto-lista">
+        <a class="contacto-item" href="mailto:franciscojavier.cervera7@gmail.com">
+            <span class="contacto-icono">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+            </span>
+            <span>franciscojavier.cervera7@gmail.com</span>
+        </a>
+        <a class="contacto-item" href="https://www.linkedin.com/in/francisco-javier-cervera-mu%C3%B1oz/" target="_blank" rel="noopener noreferrer">
+            <span class="contacto-icono">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.15 1.45-2.15 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"></path>
+                </svg>
+            </span>
+            <span>linkedin.com/in/francisco-javier-cervera-muñoz</span>
+        </a>
+        <div class="contacto-item">
+            <span class="contacto-icono">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+            </span>
+            <span>Murcia, España</span>
+        </div>
+    </div>
 </section>
